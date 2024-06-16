@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Cars Renting Market</title>
+  </head>
+  <body>
+    <h1>TOP 10 States with most renting cars</h1>
+    <table>
+      {{#data}}
+      <tr>
+        <td>{{state}}</td>
+        <td>{{car_counts}}</td>
+      </tr>
+      {{/data}}
+    </table>
+  </body>
+</html>

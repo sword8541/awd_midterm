@@ -1,0 +1,519 @@
+﻿Model X;Tesla;suv
+Prius;Toyota;car
+Mustang;Ford;car
+Sebring;Chrysler;car
+GL-Class;Mercedes-Benz;suv
+Yukon XL;GMC;suv
+Expedition;Ford;suv
+Focus RS;Ford;car
+EcoSport;Ford;suv
+F-150;Ford;truck
+Tiguan;Volkswagen;suv
+Avalon Hybrid;Toyota;car
+CV Tradesman;Ram;minivan
+Cherokee;Jeep;suv
+Cayman;Porsche;car
+Wrangler JK;Jeep;suv
+Explorer;Ford;suv
+Rogue;Nissan;suv
+Model S;Tesla;car
+Charger;Dodge;car
+Jetta;Volkswagen;car
+Sonata;Hyundai;car
+Impala;Chevrolet;car
+Accent;Hyundai;car
+Focus;Ford;car
+Sequoia;Toyota;suv
+GLC-Class;Mercedes-Benz;suv
+Fiesta;Ford;car
+Journey;Dodge;suv
+ES 300h;Lexus;car
+ATS;Cadillac;car
+IS 350;Lexus;car
+fortwo;smart;car
+Range Rover;Land Rover;suv
+Model 3;Tesla;car
+718 Boxster;Porsche;car
+S-Class;Mercedes-Benz;car
+7 Series;BMW;car
+C-Class;Mercedes-benz;car
+4 Series;BMW;car
+Panamera;Porsche;car
+GLA-Class;Mercedes-Benz;suv
+MDX;Acura;suv
+Corvette Stingray;Chevrolet;car
+A8;Audi;car
+Altima;Nissan;car
+A7;Audi;car
+RS 7;Audi;car
+Grand Caravan;Dodge;minivan
+XJ;Jaguar;car
+Corvette;Chevrolet;car
+Camaro;Chevrolet;car
+Range Rover Sport;Land Rover;suv
+Quattroporte;Maserati;car
+Q50;INFINITI;car
+Boxster;Porsche;car
+Cayenne;Porsche;suv
+EX35;Infiniti;suv
+E-Class;Mercedes-Benz;car
+CX-5;Mazda;suv
+Z4;BMW;car
+Range Rover Evoque;Land Rover;suv
+X4;BMW;suv
+QX60;Infiniti;suv
+6 Series Gran Coupe;BMW;car
+M4;BMW;car
+Ghibli;Maserati;car
+5 Series;BMW;car
+i8;BMW;car
+AMG GT;Mercedes-Benz;car
+Arteon;Volkswagen;car
+X6;BMW;suv
+SLK-Class;Mercedes-Benz;car
+Range Rover Velar;Land Rover;suv
+Continental GT;Bentley;car
+718 Cayman;Porsche;car
+F-TYPE;Jaguar;car
+TTS;Audi;car
+Yukon;GMC;suv
+Suburban;Chevrolet;suv
+Corolla;Toyota;car
+Mirage;Mitsubishi;car
+IS 200t;Lexus;car
+Versa;Nissan;car
+Challenger;Dodge;car
+Q7;Audi;suv
+Rio;Kia;car
+New Beetle;Volkswagen;car
+Silverado 1500;Chevrolet;truck
+Optima;Kia;car
+Macan;Porsche;suv
+Sorento;Kia;suv
+Wrangler;Jeep;suv
+IS;Lexus;car
+Versa Note;Nissan;car
+CLS-Class;Mercedes-Benz;car
+Soul;Kia;car
+Passat;Volkswagen;car
+Elantra;Hyundai;car
+Grand Cherokee;Jeep;suv
+Cooper;MINI;car
+X5;BMW;suv
+Compass;Jeep;suv
+Slingshot;Polaris;car
+Cruze;Chevrolet;car
+Wrangler Unlimited;Jeep;suv
+300;Chrysler;car
+Levante;Maserati;suv
+Genesis;Hyundai;car
+Sentra;Nissan;car
+Camry;Toyota;car
+3 Series;BMW;car
+RAV4;Toyota;suv
+Tahoe;Chevrolet;suv
+MX-5 Miata;Mazda;car
+HS 250h;Lexus;car
+A4;Audi;car
+Sienna;Toyota;minivan
+Patriot;Jeep;suv
+CLA-Class;Mercedes-Benz;car
+Escape;Ford;suv
+IS 250;Lexus;car
+4 Series Gran Coupe;BMW;car
+Yaris iA;Toyota;car
+LaCrosse;Buick;car
+TSX;Acura;car
+Prius v;Toyota;car
+500;FIAT;car
+Accord;Honda;car
+CT 200h;Lexus;car
+X1;BMW;suv
+Elantra GT;Hyundai;car
+Prius c;Toyota;car
+Giulia;Alfa Romeo;car
+Sierra 1500;GMC;truck
+Yaris;Toyota;car
+Trax;Chevrolet;suv
+SL-Class;Mercedes-Benz;car
+S5;Audi;car
+Atlas Cross Sport;Volkswagen;suv
+4Runner;Toyota;suv
+Model Y;Tesla;suv
+ES 350;Lexus;car
+Navigator;Lincoln;suv
+Equinox;Chevrolet;suv
+Accord Sedan;Honda;car
+Ridgeline;Honda;truck
+Highlander;Toyota;suv
+Metris;Mercedes-Benz;minivan
+A6;Audi;car
+GS 350;Lexus;car
+Eclipse Cross;Mitsubishi;suv
+E-Tron;Audi;suv
+Pilot;Honda;suv
+Odyssey;Honda;minivan
+Santa Fe;Hyundai;suv
+Supra;Toyota;car
+CTS Coupe;Cadillac;car
+Tacoma;Toyota;truck
+Acadia;GMC;suv
+A5;Audi;car
+NX 200t;Lexus;suv
+Impreza;Subaru;car
+Civic Sedan;Honda;car
+Convertible;MINI;car
+Mazda6;Mazda;car
+Hardtop 2 Door;MINI;car
+RX 350;Lexus;suv
+HR-V;Honda;suv
+Civic;Honda;car
+Frontier;Nissan;truck
+S40;Volvo;car
+Optima Hybrid;Kia;car
+ES 330;Lexus;car
+Fit;Honda;car
+Niro;Kia;suv
+Transit Wagon;Ford;van
+Colorado;Chevrolet;truck
+Shelby AC Cobra;Ford;car
+Silver Shadow;Rolls Royce;car
+Tundra;Toyota;truck
+XE;Jaguar;car
+Gallardo;Lamborghini;car
+CC;Volkswagen;car
+Outlander;Mitsubishi;suv
+CX-9;Mazda;suv
+Fusion;Ford;car
+C-Max Hybrid;Ford;car
+XC60;Volvo;suv
+200;Chrysler;car
+Sonic;Chevrolet;car
+Solstice;Pontiac;car
+Tucson;Hyundai;suv
+Regal Sportback;Buick;car
+1500;Ram;truck
+M3;BMW;car
+Mazda3;Mazda;car
+GX 460;Lexus;suv
+2 Series;BMW;car
+Quest;Nissan;minivan
+Forte;Kia;car
+Express;Chevrolet;van
+Golf GTI;Volkswagen;car
+CT6;Cadillac;car
+Q5;Audi;suv
+Maxima;Nissan;car
+i3;BMW;car
+MX-5 Miata RF;Mazda;car
+IS 250 C;Lexus;car
+Spark;Chevrolet;car
+3;Mazda;car
+S60;Volvo;car
+Stelvio;Alfa Romeo;suv
+Bolt EV;Chevrolet;car
+Sprinter;Mercedes-Benz;van
+Malibu;Chevrolet;car
+Ranger;Ford;truck
+Golf;Volkswagen;car
+Touareg;Volkswagen;suv
+X5 M;BMW;suv
+3 Series Gran Turismo;BMW;car
+CR-V;Honda;suv
+Ioniq Plug-In Hybrid;Hyundai;car
+Camry Solara;Toyota;car
+G37;Infiniti;car
+G Sedan;Infiniti;car
+G-Class;Mercedes-Benz;suv
+Fusion Hybrid;Ford;car
+6 Series;BMW;car
+Enclave;Buick;suv
+Camry Hybrid;Toyota;car
+500L;FIAT;car
+A3;Audi;car
+Armada;Nissan;suv
+allroad;Audi;car
+Continental;Lincoln;car
+XTS;Cadillac;car
+Gladiator;Jeep;truck
+124 Spider;FIAT;car
+V12 Vantage S;Aston Martin;car
+Atlas;Volkswagen;suv
+Escalade;Cadillac;suv
+Outback;Subaru;suv
+C-Max;Ford;car
+LX 570;Lexus;suv
+GLE-Class;Mercedes-benz;suv
+Silverado 2500HD;Chevrolet;truck
+S4;Audi;car
+RX 450h;Lexus;suv
+Crosstrek;Subaru;suv
+Murano;Nissan;suv
+Edge;Ford;suv
+Avenger;Dodge;car
+G6;Pontiac;car
+3500;Ram;truck
+LR4;Land Rover;suv
+Cruze Limited;Chevrolet;car
+911;Porsche;car
+86;Toyota;car
+ATS Coupe;Cadillac;car
+TLX;Acura;car
+XF;Jaguar;car
+RDX;Acura;suv
+LC 500;Lexus;car
+TL;Acura;car
+TrailBlazer;Chevrolet;suv
+124 Convertible 2000;FIAT;car
+Flex;Ford;car
+Renegade;Jeep;suv
+Blazer;Chevrolet;suv
+Q60 Coupe;Infiniti;car
+FJ Cruiser;Toyota;suv
+M6;BMW;car
+Pacifica;Chrysler;minivan
+GLK-Class;Mercedes-Benz;suv
+NX;Lexus;suv
+Fusion Energi;Ford;car
+Mariner;Mercury;suv
+ILX;Acura;car
+Volt;Chevrolet;car
+S6;Audi;car
+Explorer Sport Trac;Ford;truck
+Legacy;Subaru;car
+Santa Fe Sport;Hyundai;suv
+Pathfinder;Nissan;suv
+M-Class;Mercedes-Benz;suv
+Forester;Subaru;suv
+Xterra;Nissan;suv
+Terrain;GMC;suv
+X3;BMW;suv
+Escalade ESV;Cadillac;suv
+Venza;Toyota;car
+Outlander Sport;Mitsubishi;suv
+Sedona;Kia;minivan
+Insight;Honda;car
+Mirage G4;Mitsubishi;car
+QX80;INFINITI;suv
+Q60;Infiniti;car
+Town and Country;Chrysler;minivan
+QX;Infiniti;suv
+Durango;Dodge;suv
+Caliber;Dodge;car
+Aveo;Chevrolet;car
+Expedition MAX;Ford;suv
+Ram 1500;Dodge;truck
+Traverse;Chevrolet;suv
+Voyager;Chrysler;minivan
+ION;Saturn;car
+6;Mazda;car
+Taurus;Ford;car
+Flying Spur;Bentley;car
+4-Series;BMW;car
+Avalon;Toyota;car
+F-PACE;Jaguar;suv
+4C;Alfa Romeo;car
+GLS-Class;Mercedes-benz;suv
+7-Series;BMW;car
+Discovery;Land Rover;suv
+570S;McLaren;car
+Continental GT Speed;Bentley;car
+R8;Audi;car
+FR-S;Scion;car
+GT-R;Nissan;car
+GX 470;Lexus;suv
+Grand Cherokee SRT;Jeep;suv
+S90;Volvo;car
+CTS;Cadillac;car
+M-Series;BMW;car
+Stinger;Kia;car
+Q3;Audi;suv
+H2;HUMMER;suv
+5-Series;BMW;car
+Discovery Sport;Land Rover;suv
+MKX;Lincoln;suv
+C-HR;Toyota;suv
+XT4;Cadillac;suv
+Corolla Hatchback;Toyota;car
+California;Ferrari;car
+Huracan;Lamborghini;car
+XC90;Volvo;suv
+MAZDA2;Mazda;car
+Touareg 2;Volkswagen;suv
+Sierra 3500HD;GMC;truck
+Impala Limited;Chevrolet;car
+HHR;Chevrolet;car
+XV Crosstrek;Subaru;suv
+Express Cargo;Chevrolet;van
+Cooper Countryman;MINI;car
+Tahoe Hybrid;Chevrolet;suv
+XC40;Volvo;suv
+3-Series;BMW;car
+MAZDA5;Mazda;minivan
+V8 Vantage;Aston Martin;car
+LX;Lexus;suv
+tC;Scion;car
+500X;FIAT;suv
+Verano;Buick;car
+xB;Scion;car
+Continental Supersports;Bentley;car
+Continental GTC;Bentley;car
+Eos;Volkswagen;car
+S2000;Honda;car
+370Z;Nissan;car
+380sl;Mercedes-Benz;car
+TT RS;Audi;car
+QX50;Infiniti;suv
+GranTurismo;Maserati;car
+Ghost;Rolls Royce;car
+Ascent;Subaru;suv
+RX 350L;Lexus;suv
+Ram 1500 Classic;Dodge;truck
+Evora 400;Lotus;car
+GX;Lexus;suv
+CL-Class;Mercedes-Benz;car
+F430;Ferrari;car
+Sky;Saturn;car
+Dart;Dodge;car
+Cadenza;Kia;car
+Beetle;Volkswagen;car
+NX 300;Lexus;suv
+MKS;Lincoln;car
+XT5;Cadillac;suv
+Matrix;Toyota;car
+488 Gtb;Ferrari;car
+Exige;Lotus;car
+M6 Gran Coupe;BMW;car
+2-Series;BMW;car
+GLE-Class Coupe;Mercedes-Benz;suv
+RX;Lexus;suv
+V60;Volvo;car
+Passport;Honda;suv
+1 Series;BMW;car
+JX;Infiniti;suv
+STS;Cadillac;car
+Telluride;Kia;suv
+Savana;GMC;van
+e-Golf;Volkswagen;car
+Evora;Lotus;car
+LS 460;Lexus;car
+SLC-Class;Mercedes-Benz;car
+Rogue Sport;Nissan;suv
+NV200;Nissan;minivan
+Kona;Hyundai;suv
+F-450 Super Duty;Ford;truck
+Azera;Hyundai;car
+Elantra Touring;Hyundai;car
+iM;Scion;car
+2;Mazda;car
+G35;Infiniti;car
+Leaf;Nissan;car
+Clubman;MINI;car
+Vibe;Pontiac;car
+Veloster;Hyundai;car
+MKZ;Lincoln;car
+TT;Audi;car
+xD;Scion;car
+RC 350;Lexus;car
+F-250 Super Duty;Ford;truck
+Hardtop 2dr;MINI;car
+Highlander Hybrid;Toyota;suv
+WRX;Subaru;car
+SQ5;Audi;suv
+A8 L;Audi;car
+Crosstour;Honda;car
+Genesis G70;Hyundai;car
+Lancer;Mitsubishi;car
+Commander;Jeep;suv
+RAV4 Hybrid;Toyota;suv
+Prius Prime;Toyota;car
+Ioniq Hybrid;Hyundai;car
+488 Spider;Ferrari;car
+Urus;Lamborghini;suv
+348 Spider;Ferrari;car
+488GTB;Ferrari;car
+M5;BMW;car
+DB9;Aston Martin;car
+Q8;Audi;suv
+S80;Volvo;car
+Sportage;Kia;suv
+Canyon;GMC;truck
+Equus;Hyundai;car
+Shelby GT350;Ford;car
+Routan;Volkswagen;minivan
+A5 Sportback;Audi;car
+Soul EV;Kia;car
+SRX;Cadillac;suv
+Corolla iM;Toyota;car
+5;Mazda;minivan
+Accord Hybrid;Honda;car
+RS 5;Audi;car
+NSX;Acura;car
+X2;BMW;suv
+Civic Hatch;Honda;car
+GTI;Volkswagen;car
+Eclipse Spyder;Mitsubishi;car
+Freestyle;Ford;car
+Malibu Limited;Chevrolet;car
+Ram 3500;Dodge;truck
+Viper;Dodge;car
+G80;Genesis;car
+Jetta Hybrid;Volkswagen;car
+IS 300;Lexus;car
+Juke;Nissan;car
+Cube;Nissan;car
+Clarity;Honda;car
+356 Speedster;Porsche;car
+CX-7;Mazda;suv
+XK-Series;Jaguar;car
+Shelby Cobra;Ford;car
+Liberty;Jeep;suv
+356;Porsche;car
+H3;HUMMER;suv
+Transit-350 Wagon EL;Ford;van
+MKC;Lincoln;suv
+Continental Flying Spur;Bentley;car
+Cooper Clubman;MINI;car
+RC 200t;Lexus;car
+X5 eDrive;BMW;suv
+X6 M;BMW;suv
+2500;Ram;truck
+Encore;Buick;suv
+Ux;Lexus;suv
+Transit Connect;Ford;minivan
+RC;Lexus;car
+Palisade;Hyundai;suv
+Transit-350 Wagon;Ford;van
+Titan;Nissan;truck
+Kizashi;Suzuki;car
+Corolla Hybrid;Toyota;car
+Caravan;Dodge;minivan
+Silverado 1500 Hybrid;Chevrolet;truck
+Spectra;Kia;car
+RS 3;Audi;car
+500e;FIAT;car
+Rabbit;Volkswagen;car
+Transit Van;Ford;van
+Navigator L;Lincoln;suv
+Promaster Cargo Van;Ram;van
+Land Cruiser;Toyota;suv
+Rio 5-Door;Kia;car
+LR2;Land Rover;suv
+Element;Honda;suv
+IS 350 C;Lexus;car
+Dakota;Ram;truck
+Cooper Roadster;MINI;car
+X7;BMW;suv
+458 Spider;Ferrari;car
+M35;Infiniti;car
+XL7;Suzuki;suv
+Uplander;Chevrolet;minivan
+Titan XD;Nissan;truck
+Regal;Buick;car
+RX 400h;Lexus;suv
+Town Car;Lincoln;car
+Van;Volkswagen;car
+8-Series;BMW;car
+GS 450h;Lexus;car
+718;Porsche;car
+Cooper Coupe;MINI;car
