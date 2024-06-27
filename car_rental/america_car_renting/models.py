@@ -17,7 +17,8 @@ class City(models.Model):
     def __str__(self):
         return f'{self.city_name}'
 
-
+class Vehicle_owner(models.Model):
+    owner_id = models.CharField(max_length=128,null=False,blank=False,db_index=True) 
 class Vehicle(models.Model):
     vehicle_id = models.CharField(max_length=128,null=False,blank=False,db_index=True)  
     vehicle_model = models.CharField(max_length=128,null=False,blank=False)
@@ -33,12 +34,13 @@ class Vehicle(models.Model):
     fuel_type =  models.CharField(max_length=128,null=False,blank=False)  
     # a city can have many renting cars running
     city = models.ForeignKey(City,on_delete=models.DO_NOTHING)
+    # a person can own several cars
+    vehicle_owner = models.ForeignKey(Vehicle_owner,on_delete=models.DO_NOTHING,null=True)
+    #description
     def __str__(self):
         return f'type: {self.vehicle_type} model: {self.vehicle_model} made by {self.vehicle_make}'
 
-class Vehicle_renting(models.Model):
-    owner_id = models.CharField(max_length=128,null=False,blank=False,db_index=True) 
-    # a person can own several cars
-    vehicle = models.ForeignKey(Vehicle,on_delete=models.DO_NOTHING)
+
+    
     
 

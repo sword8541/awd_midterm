@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 5 Owner</title>
+</head>
+<body>
+    <h1>Top 5 Owner</h1>
+    <ul>
+    {% for d in data %}
+        <li>Owner ID: {{d.owner_id}} &nbsp&nbsp Number of vehicles: {{d.num_vehicles}}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

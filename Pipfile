@@ -9,6 +9,8 @@ ipython = "*"
 django-extensions = "*"
 jupyter = "*"
 notebook = "==6.5.6"
+djangorestframework = "*"
+drf-writable-nested = "*"
 
 [dev-packages]
 ipykernel = "*"
