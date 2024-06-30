@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'america_car_renting',
     'django_extensions', 
     'rest_framework',
+    'bootstrap5',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

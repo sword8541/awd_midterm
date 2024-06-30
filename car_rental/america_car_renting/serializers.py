@@ -7,6 +7,7 @@ class StateSerializer(serializers.ModelSerializer):
         model = State
         fields = ['state_name']
 
+# use nested ModelSerializer for models with onetomany or manytomany relations
 class VehicleOwnerSerializer(WritableNestedModelSerializer):
     class Meta:
         model = Vehicle_owner
@@ -20,6 +21,7 @@ class CitySerializer(WritableNestedModelSerializer):
 
         def create(self,validated_data):
             state_data = self.initial_data.get('state')
+            # validate requested data
             city = City(**{**validated_data,
                         'state':State.objects.get(pk=state_data['id']),
                         })
@@ -52,9 +54,3 @@ class VehicleListSerializer(serializers.ModelSerializer):
         fields = ['id','vehicle_id','vehicle_model','vehicle_make','vehicle_type','vehicle_year']
 
         
-class StatSerializer(serializers.Serializer):
-    owner_id = serializers.CharField(max_length=128, required=True)
-    count = serializers.IntegerField(required=True)
-
-    class Meta:
-        fields = ('owner_id','count')

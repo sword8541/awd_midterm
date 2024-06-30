@@ -9,14 +9,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.append(str(BASE_DIR))
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'car_rental.settings')
 django.setup()
-# print(BASE_DIR)
 from america_car_renting.models import *
-
-#注意mac和windows的文件路径不一样
+#build the right file path
 data_file = os.path.join(BASE_DIR, 'data\CarRentalData_cleaned.csv')
-# print(data_file)
 
-
+#create empty container for temporary data storage
 vehicle = defaultdict(dict)
 state = set()
 city = set()
@@ -25,13 +22,13 @@ vehicle_owner = set()
 with open(data_file) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     header = csv_reader.__next__()
-#     print(header)
     for row in csv_reader:
         state.add(row[6])
         vehicle[row[0]] = row[1:6] + row[7:13]
         city.add((row[5],row[6]))
         vehicle_owner.add(row[7])
 
+#clear database for initialization
 Vehicle.objects.all().delete()
 Vehicle_owner.objects.all().delete() 
 City.objects.all().delete()
@@ -72,9 +69,6 @@ for vehicle_id,data in vehicle.items():
                                      vehicle_owner = vehicle_owner_rows[data[5]])
     row.save()
     vehicle_rows[vehicle_id] = row
-
-
-
 
 pprint.pprint(state_rows)
 pprint.pprint(city_rows)

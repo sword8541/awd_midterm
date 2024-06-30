@@ -1,7 +1,5 @@
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
-
-# from django.views.decorators.csrf import csrf_exempt
 from rest_framework.decorators import api_view
 from rest_framework import status
 from rest_framework.response import Response
@@ -11,9 +9,10 @@ from rest_framework import generics, mixins
 from .models import *
 from .serializers import *
 from rest_framework import viewsets
-from django.db.models import Avg,Min,Max,Count
+from django.db.models import Avg,Min,Max,Count,Sum
 from rest_framework.generics import ListAPIView
 from django.forms.models import model_to_dict
+from django.db.models import Q
 
 
 
@@ -37,15 +36,6 @@ class VehicleDetails(mixins.CreateModelMixin,
         return self.destroy(request,*args,**kwargs)
     
 
-# @api_view(['Get'])
-# def genes_list(request):
-#     try:
-#         genes = Gene.objects.all()
-#     except Gene.DoesNotExist:
-#         return HttpResponse(status=404)
-#     if request.method == 'GET':
-#         serializer = GeneListSerializer(genes, many=True)
-#         return Response(serializer.data)
     
 class VehicleList(generics.ListAPIView):
     queryset = Vehicle.objects.all()
@@ -106,48 +96,71 @@ class VehicleOwnerDetails(mixins.CreateModelMixin,
     def delete(self,request,*args,**kwargs):
         return self.destroy(request,*args,**kwargs)
     
-class CityWithMostVehicles(generics.ListAPIView):
-    pass 
 
-# class OwnerWithMostVehicles(generics.ListAPIView):
-#     queryset = Vehicle_owner.objects.annotate(num_vehicles=Count('vehicle')).order_by('-num_vehicles')[:5]
-#     serializer_class = VehicleOwnerSerializer
     
-
-class CityWithMostVehicles(generics.ListAPIView):
-    queryset = City.objects.annotate(num_vehicles=Count('vehicle')).order_by('-num_vehicles')[:5]
-    serializer_class = VehicleOwnerSerializer 
-
-def OwnerWithMostVehicles(request):
-    queryset = Vehicle_owner.objects.annotate(num_vehicles=Count('vehicle')).order_by('-num_vehicles')[:5]
-    # print(queryset.values())
-    # print(queryset[0].owner_id,queryset[0].num_vehicles)
-    # serialized_data = VehicleOwnerSerializer(queryset,many=True)
-    # for data in list(serialized_data.data):
-    #     # data['count'] = 
-    #     print(data)
-    # print(serialized_data)
-    template_name = "america_car_renting/top5_owners.html"
-    # return render(request, template_name,{'data': queryset.values()})
-    
-  
-
-
-class StatListView(ListAPIView):
-    # queryset = Vehicle_owner.objects.raw("SELECT id,owner_id FROM america_car_renting_vehicle_owner LIMIT 10")
-    queryset = Vehicle_owner.objects.annotate(num_vehicles=Count('vehicle')).order_by('-num_vehicles')[:5]
-
-    # data = [{'id': q.pk, 'owner_id': q.owner_id, 'count':q.count} for q in queryset]
-    print(queryset)
-    
+class CityWithMostEVs(ListAPIView):
+    ev_count = Count('vehicle',filter=Q(vehicle__fuel_type__exact = 'ELECTRIC'))
+    queryset = City.objects.annotate(num_EVs=ev_count).order_by('-num_EVs')[:5]
     def list(self, request):
         queryset = self.get_queryset()
-        list_of_dicts = [model_to_dict(l) for l in queryset]
+        list_of_dicts = [l for l in queryset.values()]
         # the serializer didn't take my RawQuerySet, so made it into a list
         # serializer = StatSerializer(list(queryset), many=True)
         # return Response(serializer.data)
+        return JsonResponse(list_of_dicts,safe=False) 
+
+class FuelTypeOverView(ListAPIView):
+    queryset =Vehicle.objects.values('fuel_type').annotate(num_vehicles=Count('fuel_type')).order_by('-num_vehicles') 
+    def list(self, request):
+        queryset = self.get_queryset()
+        list_of_dicts = [l for l in queryset]
+        return JsonResponse(list_of_dicts,safe=False) 
+
+
+    
+# This is a class based api view
+class apiOwnerWithMostVehicles(ListAPIView):
+    queryset = Vehicle_owner.objects.annotate(num_vehicles=Count('vehicle')).order_by('-num_vehicles')[:5]
+    
+    def list(self, request):
+        queryset = self.get_queryset()
+        list_of_dicts = [l for l in queryset.values()]
+        return JsonResponse(list_of_dicts,safe=False)
+    
+  
+class CityByFuelType(ListAPIView):
+    queryset = City.objects.values('city_name','vehicle__fuel_type').annotate(num_vehicles=Count('vehicle__fuel_type'))
+    def list(self, request):
+        queryset = self.get_queryset()
+        list_of_dicts = [l for l in queryset]
         return JsonResponse(list_of_dicts,safe=False)
 
-class CityWithMostVehicles(generics.ListAPIView):
-    queryset = City.objects.annotate(num_vehicles=Count('vehicle')).order_by('-num_vehicles')[:5]
-    serializer_class = VehicleOwnerSerializer 
+class VehicleType(ListAPIView):
+    queryset =Vehicle.objects.values('vehicle_type').annotate(num_vehicles=Count('vehicle_type')).order_by('-num_vehicles') 
+    def list(self, request):
+        queryset = self.get_queryset()
+        list_of_dicts = [l for l in queryset]
+        return JsonResponse(list_of_dicts,safe=False) 
+
+class VehicleMake(ListAPIView):
+    queryset =Vehicle.objects.values('vehicle_make').annotate(num_vehicles=Count('vehicle_make')).order_by('-num_vehicles') 
+    def list(self, request):
+        queryset = self.get_queryset()
+        list_of_dicts = [l for l in queryset]
+        return JsonResponse(list_of_dicts,safe=False)  
+    
+class EVMake(ListAPIView):
+    queryset =Vehicle.objects.filter(fuel_type__exact = 'ELECTRIC').values('vehicle_make').annotate(num_EVs=Count('vehicle_make')).order_by('-num_EVs') 
+    def list(self, request):
+        queryset = self.get_queryset()
+        list_of_dicts = [l for l in queryset]
+        return JsonResponse(list_of_dicts,safe=False)  
+
+
+class VehicleWithHighestRanking(ListAPIView):
+    #vehicle average ranking with over 1000 user reviews  
+    queryset =Vehicle.objects.values('vehicle_make','vehicle_model').annotate(review_count=Sum('review_count'),ranking=Avg('ranking')).filter(review_count__gt=1000).order_by('-ranking') 
+    def list(self, request):
+        queryset = self.get_queryset()
+        list_of_dicts = [l for l in queryset]
+        return JsonResponse(list_of_dicts,safe=False)  

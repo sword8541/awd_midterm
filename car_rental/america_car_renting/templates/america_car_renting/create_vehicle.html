@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Vehicle</title>
+    {% load bootstrap5 %}
+</head>
+<body>
+    <h2>Add new Vehicle</h2>
+    <form action="/create_vehicle/" method='POST' class='form'>
+        {% csrf_token %}
+        {%bootstrap_form form%}
+        <input type="submit" value='Submit'>
+    </form>
+</body>
+</html>

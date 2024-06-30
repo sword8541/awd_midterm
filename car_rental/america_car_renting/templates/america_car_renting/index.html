@@ -4,11 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starting Page</title>
+    {%load bootstrap5%}
 </head>
 <body>
     <ul>
-        <li>Get http://127.0.0.1:8000/api/vehicle/[VEHICLE ID]- return the vehicle and all we know about it <br></li>
-        <a href="http://127.0.0.1:8000/api/vehicle/10573">http://127.0.0.1:8000/api/vehicle/10573</a>
+        <h2>General information</h2>
+        <li>Get/POST/PUT/DELETE http://127.0.0.1:8000/api/vehicle/[VEHICLE ID] -return the vehicle and all we know about it, it uses django rest framework and data validated by serializer,you can also add,update and delete any entry<br></li>
+        <a href="http://127.0.0.1:8000/api/vehicles/15856">http://127.0.0.1:8000/api/vehicles/15856</a>
+
+        <li>POST http://127.0.0.1:8000/create_vehicle/ -add a new vehicle for renting (this links to a simple page with a form that we make the post request) <br></li>
+        <a href="http://127.0.0.1:8000/api/vehicles/<int:pk>">http://127.0.0.1:8000/create_vehicle/</a>
+        
+        <h2>Vehicles Preference</h2>
+        <li>Get http://127.0.0.1:8000/api/vehicles -return a list of vehicles with all the info we know <br></li>
+        <a href="http://127.0.0.1:8000/api/vehicles">http://127.0.0.1:8000/api/vehicles</a>
+
+        <li>Get http://127.0.0.1:8000/api/vehicles/highest-ranking -return number of vehicles(with at least 1000 user reviews) and its average ranking(1-5) so that we have an overview of people’s car rental preference at that time  <br></li>
+        <a href="http://127.0.0.1:8000/api/vehicles/highest-ranking">http://127.0.0.1:8000/api/vehicles/highest-ranking</a> 
+
+        <li>Get http://127.0.0.1:8000/api/vehicles/fuel-type -return number of vehicles grouped by fuel type in descending order(ie ELECTRIC,HYBRID,GAAOLINE) so that we have an overview of people’s car rental preference at that time  <br></li>
+        <a href="http://127.0.0.1:8000/api/vehicles/fuel-type">http://127.0.0.1:8000/api/vehicles/fuel-type</a> 
+        
+        <li>Get http://127.0.0.1:8000/api/vehicles/vehicle-type -return number of vehicles grouped by vehicle type in descending order(ie car,suv,minivan) so that we have an overview of people’s car rental preference at that time  <br></li>
+        <a href="http://127.0.0.1:8000/api/vehicles/vehicle-type">http://127.0.0.1:8000/api/vehicles/vehicle-type</a> 
+       
+        <li>Get http://127.0.0.1:8000/api/vehicles/vehicle-make -return number of vehicles grouped by vehicle makers in descending order(ie Toyata,Tesla) so that we have an overview of people’s car rental preference at that time  <br></li>
+        <a href="http://127.0.0.1:8000/api/vehicles/vehicle-make">http://127.0.0.1:8000/api/vehicles/vehicle-make</a> 
+
+        <li>Get http://127.0.0.1:8000/api/vehicles/ev-make -return number of pure Electric vehicles grouped by vehicle makers in descending orde so that we have an idea of which company made most EVs at that time  <br></li>
+        <a href="http://127.0.0.1:8000/api/vehicles/ev-make">http://127.0.0.1:8000/api/vehicles/ev-make</a> 
+
+        <h2>Vehicle Owners</h2>
+        <li>Get http://127.0.0.1:8000/owners/top5 -return a simple page with top5 owners with most vehicles for renting in descending order  <br></li>
+        <a href="http://127.0.0.1:8000/owners/top5">http://127.0.0.1:8000/owners/top5</a>  
+        
+        <li>Get http://127.0.0.1:8000/api/owners/top5 -api version of top5 owners with most vehicles for renting(guess how many vehicles they had) in descending order  <br></li>
+        <a href="http://127.0.0.1:8000/api/owners/top5">http://127.0.0.1:8000/api/owners/top5</a>  
+
+        <h2>Cities</h2>
+        <li>Get http://127.0.0.1:8000/api/cities/ev-top5 -top5 cities with most EVs for renting(now we have an idea which city is green power pioneer ) in descending order  <br></li>
+        <a href="http://127.0.0.1:8000/api/cities/ev-top5">http://127.0.0.1:8000/api/cities/ev-top5</a>  
+
+        <li>Get http://127.0.0.1:8000/api/cities/vehicle-by-fuel-type -return a detail list of vehicles grouped by fuel type in each city <br></li>
+        <a href="http://127.0.0.1:8000/api/cities/vehicle-by-fuel-type">http://127.0.0.1:8000/api/cities/vehicle-by-fuel-type</a>  
+
     </ul>
 </body>
 </html>
